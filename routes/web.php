@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'user'], function() {
+     Route::get('condition/create', 'User\ConditionController@add');
+     Route::post('condition/create', 'User\ConditionController@create'); 
+});
