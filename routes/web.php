@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'user'], function() {
+Route::group(['prefix' => 'user','middleware' => 'auth'], function() {
      Route::get('condition/create', 'User\ConditionController@add');
      Route::post('condition/create', 'User\ConditionController@create');
      Route::get('condition', 'User\ConditionController@index');
