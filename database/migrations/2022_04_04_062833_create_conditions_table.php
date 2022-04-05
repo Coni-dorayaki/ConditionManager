@@ -18,11 +18,11 @@ class CreateConditionsTable extends Migration
             $table->integer('condition'); 
             $table->string('body');  
             $table->string('image1_path')->nullable();  
-            $table->integer('Morning'); 
+            $table->integer('morning'); 
             $table->string('image2_path')->nullable();  
-            $table->integer('Lunch'); 
+            $table->integer('lunch'); 
             $table->string('image3_path')->nullable();  
-            $table->integer('Dinner'); 
+            $table->integer('dinner'); 
             $table->timestamps();
         });
     }

@@ -21,5 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'user'], function() {
      Route::get('condition/create', 'User\ConditionController@add');
-     Route::post('condition/create', 'User\ConditionController@create'); 
+     Route::post('condition/create', 'User\ConditionController@create');
+     Route::get('condition', 'User\ConditionController@index');
+     Route::get('condition/edit', 'User\ConditionController@edit');
+     Route::post('condition/edit', 'User\ConditionController@update');
+     Route::get('condition/delete', 'User\ConditionController@delete');
 });
